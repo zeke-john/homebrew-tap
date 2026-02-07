@@ -3,7 +3,7 @@ cask "komplete" do
   name "komplete"
   desc "AI shell assistant - natural language to commands and inline autocomplete"
   homepage "https://github.com/zeke-john/komplete"
-  version "0.0.1-53c24a0"
+  version "0.0.1-cd37fb2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,29 +14,20 @@ cask "komplete" do
   on_macos do
     on_arm do
       url "https://github.com/zeke-john/komplete/releases/download/v#{version}/komplete_darwin_arm64.tar.gz"
-      sha256 "91cf5e077a64df7a3f5c3a87df9aab02c867bd63e4932698a2927fe917a91d1f"
-    end
-  end
-
-  postflight do
-    if OS.mac?
-      system_command ""/usr/bin/xattr"", args: [""-dr"", ""com.apple.quarantine"", ""#{staged_path}/komplete""]
+      sha256 "7845b70350f60c51557c8c4be9cbf1f96a04a61e15469570f97ea7c3646126e7"
     end
   end
 
   caveats do
-    "Set your API key to start using komplete:"
-    ""
+    "Get started:"
     "  komplete config set openrouter_api_key YOUR_KEY"
     ""
-    "Optional alias (add to .zshrc):"
+    "Optional alias, add to .zshrc:"
+    "  alias k=komplete"
     ""
-    "  eval "$(komplete init alias)""
-    ""
-    "Optional inline autocomplete (add to .zshrc):"
-    ""
-    "  eval "$(komplete init zsh)""
+    "Optional autocomplete, add to .zshrc:"
     "  komplete config set groq_api_key YOUR_KEY"
+    "Then run: komplete init zsh"
   end
 
   # No zap stanza required
