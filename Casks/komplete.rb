@@ -3,7 +3,7 @@ cask "komplete" do
   name "komplete"
   desc "AI shell assistant - natural language to commands and inline autocomplete"
   homepage "https://github.com/zeke-john/komplete"
-  version "0.0.1-f758cc7"
+  version "0.0.1-0b6fa04"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,7 +14,7 @@ cask "komplete" do
   on_macos do
     on_arm do
       url "https://github.com/zeke-john/komplete/releases/download/v#{version}/komplete_darwin_arm64.tar.gz"
-      sha256 "88d9b44326a980e7aa2ad11140609d05c72dc479310d0f1e1bab2798ef02d4aa"
+      sha256 "d04fb3d6d1e32420d20d99baf650dec27ab8d7a5851262561aff7053108d692e"
     end
   end
 
